@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--https://blog.js.cytoscape.org/2016/05/24/getting-started/-->
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>My Own HTML Page</title>
+    <!-- <link rel="shortcut icon" href="#"> fixes some console.log error -->
+</head>
+<style>
+    /* Edit the CSS (style) of webpage (not graph)
+   Defines the graph area of the div element
+   Takes up entire height and width of browser */
+   body {background-color: white;}
+   h1 {color: black;}
+   p {color: black;}
+   div {
+    color:blue;
+    font-size:50px;
+   }
+   div.b {
+    color:red;
+    font-size:100px;
+    font-weight:bold;
+    text-align:center;
+   }
+</style>
+<body>
+  <h1> Heading 1 </h1>
+  <p> I can type the main text here. </p>
+  <div>
+    Here is a separate section.
+  </div>
+  <div class="b">
+    And another!
+  </div>
+
+  <p id="output"></p>
+  <script>
+  document.getElementById("output").innerHTML = "Hello World!";
+  </script>
+  <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_script -->
+
+  <button type="button" onclick="myFunction()">Click Me!</button>
+  <p id="changing_text">This text will change after clicking button ...</p>
+  <script>
+  function myFunction() { 
+    document.getElementById("changing_text").innerHTML = "... now it's different";
+  }
+  </script>
+  <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_script_html -->
+
+  <p>Now here is a lightbulb</p>
+  <script>
+  function light(sw) {
+    var pic;
+    if (sw == 0) {
+      pic = "pic_bulboff.gif"
+    } else {
+      pic = "pic_bulbon.gif"
+    }
+    document.getElementById('myImage').src = pic;
+  }
+  </script>
+  <img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+  <p>
+  <button type="button" onclick="light(1)">Light On</button>
+  <button type="button" onclick="light(0)">Light Off</button>
+  </p>
+  <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_script_attribute -->
+
+</body>
+</html>
